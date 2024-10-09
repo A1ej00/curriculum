@@ -27,21 +27,15 @@
     <h2>Resumen</h2>
     <p>Breve descripción de tus habilidades y experiencia.</p>
     <div id="map" style="height: 400px;"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-    <script>
-        function initMap() {
-            var location = {lat: -34.397, lng: 150.644};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-        window.onload = initMap;
-    </script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script>
+  var map = L.map('map').setView([51.505, -0.09], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+  L.marker([51.5, -0.09]).addTo(map);
+</script>
     </section>
 
     <section id="experiencia">
@@ -60,6 +54,32 @@
     <h2>Proyectos</h2>
     <img src="https://placehold.co/600x400" alt="Placeholder Image" />
     </section>
+
+    <form>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="experiencia">Experiencia Laboral:</label>
+        <textarea id="experiencia" name="experiencia" rows="5"
+        required></textarea>
+        <label for="educacion">Educación:</label>
+        <textarea id="educacion" name="educacion" rows="5"
+        required></textarea>
+        <label>Habilidades Técnicas:</label><br>
+        <input type="checkbox" name="habilidades" value="HTML"> HTML
+        <input type="checkbox" name="habilidades" value="CSS"> CSS
+        <input type="checkbox" name="habilidades" value="JavaScript">
+        JavaScript
+        <label for="intereses">Intereses:</label>
+        <select id="intereses" name="intereses">
+        <option value="desarrollo">Desarrollo Web</option>
+        <option value="diseno">Diseño Gráfico</option>
+        <option value="marketing">Marketing Digital</option>
+        </select>
+        <button type="submit">Enviar</button>
+        </form>
+        
 
 </main>
 <footer>
