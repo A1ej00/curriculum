@@ -17,6 +17,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
+nav ul {
+
+    /* Modelo de diseño flexible */
+    display: flex;									
+    justify-content: space-around;
+   
+}
+
 /* Eliminar las viñetas de todas las etiquetas <li> */
 li {
     list-style-type: none;
@@ -91,4 +99,46 @@ section {
    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+}
+
+section form {
+
+    /* Modelo de diseño en cuadrícula */
+    display: grid;									
+    row-gap: 0.5rem;
+
+}
+
+#resumen {
+
+    /* Modelo de diseño flexible */
+  display: flex;
+
+  /* Distribuye el espacio entre y alrededor
+     de los items en el eje principal */
+  justify-content: space-evenly;
+
+
+  /* Alinea los elementos al centro dentro
+     del bloque respecto con el eje transversal */
+  align-items: center;
+
+  /* Eje principal: por columna */
+  flex-direction: column;
+
+  /* Altura de 24% del área de visualización */
+  height: 24vh;
+
+  /* Apilamiento de elementos: ajustado 
+  hasta ocupar el máximo */
+  flex-wrap: wrap; 
+
+}
+
+#resumen h2, #resumen p {
+  width: 50%;
+}
+
+#resumen img {
+    max-width: 50%;
 }
