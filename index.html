@@ -2,10 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="autor" content="Luis Alejandro Barrera Muñoz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripcion" content="Curriculum vitae para la materia de DAWN">
+    <meta name="keywords" content="experiencia, educacion, habilidades">
     <title>Alejandro Barrera - Curriculum Vitae</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
 
 <header>
@@ -26,75 +31,104 @@
 <main>
     <section id="resumen">
         <h2 class="subtitle">Resumen</h2>
-        <p>Breve descripción de tus habilidades y experiencia.</p>
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eget sapien sit amet mi dignissim eleifend id vitae elit.</p>
         <img id="photo" src="https://placehold.co/300x200" 
                  alt="Placeholder de imagen">
     </section>
 
     <section id="experiencia">
         <h2 class="subtitle">Experiencia</h2>
+        <p>Etiam eu tristique dui. Mauris mollis nulla a augue consectetur, vel aliquam nunc fringilla. Phasellus ut dolor vehicula, imperdiet lacus non, pellentesque diam. Integer quis tempus nisi. Donec tristique maximus leo et commodo. Mauris in dapibus velit. Pellentesque finibus accumsan diam, a consectetur magna condimentum non. Phasellus vel porttitor tortor, ac hendrerit quam. Fusce rhoncus sapien eu purus maximus, eget interdum lorem pretium. Proin sit amet lectus ante.</p>
     </section>
 
     <section id="educacion">
         <h2 class="subtitle">Educación</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque tellus fringilla tortor lacinia tempus id a ipsum. Vivamus nisi tellus, fringilla sed suscipit vel, imperdiet posuere velit. Nulla at dictum purus. Vivamus ultricies, sapien non porta mollis, nulla ante rhoncus dolor, a fringilla nisl sem quis dolor. Suspendisse blandit eleifend nisi at maximus. Praesent sed erat non orci convallis facilisis. In sed dolor sed purus consequat congue in vitae diam. Aenean sed metus suscipit magna scelerisque interdum. Ut fringilla eget tortor et pretium. Sed placerat justo nisi, vitae commodo libero iaculis ut. Ut at est eget sem pharetra sollicitudin eget quis elit. Praesent id mollis purus. Vivamus tempus sem ut ultricies fringilla. Morbi quis sodales lectus. Integer ornare eleifend blandit.</p>
     </section>
 
     <section id="habilidades">
         <h2 class="subtitle">Habilidades</h2>
+        <p>Mauris pretium purus elit, at pharetra nisl venenatis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque ex orci, lobortis ut euismod at, viverra eget nulla. Praesent scelerisque odio eros. Morbi tincidunt sit amet leo eu commodo. Vestibulum lacinia id diam convallis sagittis. Fusce risus purus, vestibulum vel facilisis et, consequat et nunc. Suspendisse fermentum a libero vitae dapibus. Aliquam turpis orci, vulputate in malesuada ac, fermentum vel metus. Proin pretium neque porttitor quam placerat, nec auctor nulla luctus. Cras eu ex porta, pulvinar est at, sollicitudin ante. Curabitur libero massa, luctus quis gravida vel, tempus nec turpis. Nullam rhoncus fermentum felis quis egestas. Pellentesque convallis molestie laoreet.</p>
     </section>
 
     <section id="proyectos">
         <h2 class="subtitle">Proyectos</h2>
-    <img id="photo" src="https://placehold.co/600x400" alt="photo">
+        <div class="items"> <!-- Container for items -->
+            <div class="item">
+                <p>Sed imperdiet magna vitae venenatis consequat. In elit nibh, volutpat sit amet accumsan sed, maximus et sem.</p>
+                <img src="https://placehold.co/600x400" alt="photo">
+            </div>
+            <div class="item">
+                <p>Sed imperdiet magna vitae venenatis consequat. In elit nibh, volutpat sit amet accumsan sed, maximus et sem.</p>
+                <img src="https://placehold.co/600x400" alt="photo">
+            </div>
+            <div class="item">
+                <p>Sed imperdiet magna vitae venenatis consequat. In elit nibh, volutpat sit amet accumsan sed, maximus et sem.</p>
+                <img src="https://placehold.co/600x400" alt="photo">
+            </div>
+        </div>
     </section>
 
     <form>
-        <div>
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="experiencia">Experiencia Laboral:</label>
-            <textarea id="experiencia" name="experiencia" rows="5" required></textarea>
-        </div>
-        <div>
-            <label for="educacion">Educación:</label>
-            <textarea id="educacion" name="educacion" rows="5" required></textarea>
-        </div>
-        <div>
-            <label>Habilidades Técnicas:</label><br>
+        <div class="form-left">
             <div>
-                <input type="checkbox" name="habilidades" value="HTML"> 
-                <span>HTML</span>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
             <div>
-                <input type="checkbox" name="habilidades" value="CSS"> 
-                <span>CSS</span>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div>
-                <input type="checkbox" name="habilidades" value="JavaScript"> 
-                <span>JavaScript</span>
+                <label for="experiencia">Experiencia Laboral:</label>
+                <textarea id="experiencia" name="experiencia" rows="5" required></textarea>
             </div>
+            <div>
+                <label for="educacion">Educación:</label>
+                <textarea id="educacion" name="educacion" rows="5" required></textarea>
+            </div>
+            <div>
+                <label>Habilidades Técnicas:</label><br>
+                <div>
+                    <input type="checkbox" name="habilidades" value="HTML"> 
+                    <span>HTML</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="habilidades" value="CSS"> 
+                    <span>CSS</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="habilidades" value="JavaScript"> 
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            <div>
+                <label for="intereses">Intereses:</label>
+                <select id="intereses" name="intereses">
+                    <option value="desarrollo">Desarrollo Web</option>
+                    <option value="diseno">Diseño Gráfico</option>
+                    <option value="marketing">Marketing Digital</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
         </div>
-        <div>
-            <label for="intereses">Intereses:</label>
-            <select id="intereses" name="intereses">
-                <option value="desarrollo">Desarrollo Web</option>
-                <option value="diseno">Diseño Gráfico</option>
-                <option value="marketing">Marketing Digital</option>
-            </select>
+
+        <div><label for="ubicacion">Ubicación:</label>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092436!2d144.95373531531463!3d-37.81720997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0b3f61%3A0x5045675218ceed30!2sFlinders+St+Station!5e0!3m2!1sen!2sau!4v1622330450845!5m2!1sen!2sau" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
         </div>
-        <button type="submit">Enviar</button>
     </form>
         
 
 </main>
 <footer>
-    <p>© Tu Nombre - 2023</p>
+    <p>© Luis Alejandro Barrera Muñoz - 2024</p>
     <ul>
     <li><a
     href="https://www.linkedin.com/in/tunombre">LinkedIn</a></li>

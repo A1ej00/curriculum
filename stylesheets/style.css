@@ -1,15 +1,12 @@
-* {
-
-    /* Familia de fuentes */
-    font-family: 'Poppins', sans-serif;
-
-    /* Grosor de la fuente 200 */
-    font-weight: 200; 
+body {
+    background-color: #f6f4ea; /* Change to your desired color */
 }
 
-/* Eliminar el subrayado de todas las etiquetas <a> */
 a {
+
+    font-family: 'Noto+Sans', sans-serif;
     text-decoration: none;
+
 }
 
 /* Al pasar el mouse por encima, subrayar todos los elementos <a> dentro del elemento <nav> */
@@ -22,12 +19,16 @@ nav ul {
     /* Modelo de diseño flexible */
     display: flex;									
     justify-content: space-around;
-   
+
 }
 
 /* Eliminar las viñetas de todas las etiquetas <li> */
 li {
     list-style-type: none;
+}
+
+header{
+    text-align: center;
 }
 
 /* Centrar la etiqueta <ul> que se encuentra dentro <footer> */
@@ -36,12 +37,23 @@ footer ul {
 }
 
 h1 {
+    font-family: 'Dosis', sans-serif;
+
     /* Alineación del texto */
     text-align: center;
 
     /* Grosor de la fuente negrita */ 
     font-weight: bold; 
 }
+
+p {
+    font-family: 'Noto+Sans', sans-serif;
+
+    /* Grosor de la fuente negrita */ 
+    font-weight: bold; 
+}
+
+
 
 #photo {
 
@@ -53,9 +65,10 @@ h1 {
 }
 
 .subtitle {
+    font-family: 'Libre+Franklin', sans-serif;
 
     /* Color del texto en rgba */
-    color: rgb(107 114 128 / 0.89);
+    color : #402120;
 
     /* Transformación del texto a mayúsculas */ 
     text-transform: uppercase; 
@@ -66,8 +79,8 @@ section {
     /* margen (espacio externo) superior, derecho, abajo e izquierda */
     margin: 4px 2px 8px 2px; 
  
-    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: 0.2pt solid #cedddd; 
+    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #402120  */
+    border: 0.2pt solid #402120; 
  
     /* relleno (espacio interno) de 
     1.5% en la parte superior e inferior y 
@@ -101,12 +114,21 @@ section {
    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
 }
 
-section form {
+form {
+    display: flex;              /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the form items */
+    align-items: flex-start;    /* Align items at the top */
+}
 
-    /* Modelo de diseño en cuadrícula */
-    display: grid;									
-    row-gap: 0.5rem;
+.form-left {
+    display: flex;              /* Flexbox for vertical alignment */
+    flex-direction: column;     /* Stack items vertically */
+    flex: 1;                    /* Allow left section to take available space */
+    margin-right: 20px;        /* Space between left section and map */
+}
 
+.map-container {
+    flex: 0 0 600px;           /* Fixed width for the map */
 }
 
 #resumen {
@@ -114,13 +136,11 @@ section form {
     /* Modelo de diseño flexible */
   display: flex;
 
-  /* Distribuye el espacio entre y alrededor
-     de los items en el eje principal */
+  /* Distribuye el espacio entre y alrededor de los items en el eje principal */
   justify-content: space-evenly;
 
 
-  /* Alinea los elementos al centro dentro
-     del bloque respecto con el eje transversal */
+  /* Alinea los elementos al centro dentro del bloque respecto con el eje transversal */
   align-items: center;
 
   /* Eje principal: por columna */
@@ -129,16 +149,41 @@ section form {
   /* Altura de 24% del área de visualización */
   height: 24vh;
 
-  /* Apilamiento de elementos: ajustado 
-  hasta ocupar el máximo */
+  /* Apilamiento de elementos: ajustado hasta ocupar el máximo */
   flex-wrap: wrap; 
 
 }
 
 #resumen h2, #resumen p {
-  width: 50%;
+    flex-grow: 1;
+    width: 50%;
 }
 
 #resumen img {
+    flex-grow: 1;
     max-width: 50%;
+}
+
+#experiencia p {
+    column-count: 3; /* Number of columns */
+    column-gap: 20px; /* Space between columns */
+}
+
+#proyectos {
+    margin-top: 20px;
+}
+.subtitle {
+    margin-bottom: 20px;
+}
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.item {
+    padding: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
